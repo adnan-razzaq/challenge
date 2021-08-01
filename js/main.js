@@ -62,8 +62,7 @@ function showAlldata(array) {
 
 function showTopModels() {
   let html = ''
-  let items = topModels(parsedData)
-  console.log(items)
+  let items = topModels(csvData)
   items.forEach((element, index) => {
     html += `
             <div class="card">
@@ -71,11 +70,9 @@ function showTopModels() {
                     <img src="images/bike${index}.jpg" alt="image" srcset="">
                 </div>
                 <div class="borders">
-                <h2>Item#${element.ID}</h2>
                     <div>
-                        <p class="model">Make: ${element.Make} <span>Model:${element.Model}</span></p>
-                        <p class="price">${element.Price} €</p>
-                        <small>Date Posted:${element.Date}</small>
+                        <p class="model">Make: ${element.bikeTitle} <span>Model:${element.model}</span></p>
+                        <p class="price">${element.price} €</p>
                     </div>
                 </div>
              </div>

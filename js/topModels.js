@@ -1,28 +1,28 @@
-/** Function used to display top 3 models */
-
-function topModels(array) {
+function topModels(data) {
   let models = []
 
-  //Making Model names of same formatting
-  let result = array.data.map((item, index) => {
-    let model = item.Model.toLowerCase().split(' ')
+  let count = 0
+  let allRows = data.split(/\r?\n|\r/)
+  for (var singleRow = 1; singleRow < allRows.length; singleRow++) {
+    var rowCells = allRows[singleRow].split(',')
+    let model = rowCells[2].toLowerCase().split(' ')
     model.length > 0 ? (model = model.join('-')) : model
-    item.Model = model
-    return item
-  })
+    models.push({
+      model: model,
+      price: rowCells[3],
+      bikeTitle: rowCells[1],
+    })
+  }
 
-  //Functionality for displaying top 3 models
   models = Object.values(
-    result.reduce((r, { Make, Model, Price, ID, Date }) => {
-      r[Model] = r[Model] || {
-        ID,
-        Model,
-        Price,
-        Make,
-        Date,
+    models.reduce((r, { model, price, bikeTitle }) => {
+      r[model] = r[model] || {
+        model,
+        price,
+        bikeTitle,
         count: 0,
       }
-      r[Model].count++
+      r[model].count++
       return r
     }, {})
   )
@@ -31,7 +31,8 @@ function topModels(array) {
     return b.count - a.count
   })
 
-  //Adding only first three elements of array
   const items = models.slice(0, 3)
   return items
 }
+
+module.exports = topModels
