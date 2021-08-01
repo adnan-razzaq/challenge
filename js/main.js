@@ -1,4 +1,4 @@
-// ****** selecting dom elements **********
+// ****** Selecting Dom Elements **********
 
 let allModels = document.querySelector('#allmodels')
 let showAllbtn = document.querySelector('#showAll')
@@ -20,6 +20,7 @@ let csvData = `ID,Make,Model,Price,UserID,Date
 178,Diamant,beryll,2600,488,2021-06-27
 190,Diamant,Mandara,999,420,2021-07-17`
 
+//Parsing Csv Data
 let parsedData = Papa.parse(csvData, { header: true })
 
 // ****** Event Listeners **********
@@ -46,9 +47,11 @@ function showAlldata(array) {
                     <img src="images/bike${index}.jpg" alt="" srcset="">
                 </div>
                 <div class="borders">
+                <h2>Item#${item.ID}</h2>
                     <div>
-                        <p class="model"> ${item.Make} <span>${item.Model}</span></p>
+                        <p class="model">Make: ${item.Make} <span>Model:${item.Model}</span></p>
                         <p class="price">${item.Price} €</p>
+                        <small>Date Posted:${item.Date}</small>
                     </div>
                 </div>
              </div>
