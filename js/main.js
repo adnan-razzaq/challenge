@@ -44,7 +44,7 @@ function showAlldata(array) {
     html += `
             <div class="card">
                 <div>
-                    <img src="images/bike${index}.jpg" alt="" srcset="">
+                    <img src="images/bike${index}.jpg" alt="image" srcset="">
                 </div>
                 <div class="borders">
                 <h2>Item#${item.ID}</h2>
@@ -58,4 +58,30 @@ function showAlldata(array) {
             `
     allModels.innerHTML = html
   })
+}
+
+function showTopModels() {
+  let html = ''
+  let items = topModels(parsedData)
+  console.log(items)
+  items.forEach((element, index) => {
+    html += `
+            <div class="card">
+                <div>
+                    <img src="images/bike${index}.jpg" alt="image" srcset="">
+                </div>
+                <div class="borders">
+                <h2>Item#${element.ID}</h2>
+                    <div>
+                        <p class="model">Make: ${element.Make} <span>Model:${element.Model}</span></p>
+                        <p class="price">${element.Price} €</p>
+                        <small>Date Posted:${element.Date}</small>
+                    </div>
+                </div>
+             </div>
+            `
+  })
+
+  allModels.innerHTML = ''
+  allModels.innerHTML = html
 }
