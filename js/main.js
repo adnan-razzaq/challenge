@@ -19,6 +19,7 @@ let csvData = `ID,Make,Model,Price,UserID,Date
 121,Gudereit,ET 9 evo,1900,434,2021-07-15
 178,Diamant,beryll,2600,488,2021-06-27
 190,Diamant,Mandara,999,420,2021-07-17`
+
 let parsedData = Papa.parse(csvData, { header: true })
 
 // ****** Event Listeners **********
@@ -42,7 +43,7 @@ function showAlldata(array) {
     html += `
             <div class="card">
                 <div>
-                    <img src="bike.jpg" alt="" srcset="">
+                    <img src="images/bike${index}.jpg" alt="" srcset="">
                 </div>
                 <div class="borders">
                     <div>
