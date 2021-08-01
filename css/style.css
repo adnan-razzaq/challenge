@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: ghostwhite;
+}
+
+.container {
+  width: 768px;
+  margin: 10vh auto 0;
+}
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 3rem;
+}
+
+.title {
+  margin-bottom: 5vw;
+}
+
+h2 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.btn {
+  margin: 0 auto 3vw;
+  width: 20%;
+  display: block;
+  border-radius: 15px;
+  background: green;
+  color: honeydew;
+  padding: 8px;
+}
+.card {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 30% 50%;
+  margin: auto;
+}
+
+.card > div > img {
+  width: 100%;
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.borders {
+  border: 1px solid gray;
+  border-left: none;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.model {
+  font-size: 1.5rem;
+  padding-left: 15px;
+}
+
+.model > span {
+  float: right;
+  padding-right: 15px;
+  font-size: 1.2rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  padding-left: 15px;
+  color: green;
+  margin-top: -1vw;
+}
+
+ul {
+  list-style-type: square;
+  list-style-position: outside;
+  list-style-image: none;
+}
+
+ul > li {
+  font-size: 1.5rem;
+}
+
+footer {
+  width: 100%;
+  display: block;
+  padding: 1vw;
+}
+
+footer > p {
+  text-align: center;
+}
