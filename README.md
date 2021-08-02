@@ -49,6 +49,16 @@ To run unit test use following command
 npm run test
 ```
 
+## FEEDBACK
+
+I have a good learning opportunity while implementing this problem. The requirements of the problem was quite clear and understanable. Overall I have fun during implementation
+
+## Additional
+
+Display each product on separate page when its clicked with extra details and some description.
+
+Add a cart locally.
+
 ## Authors
 
 Adnan Razzaq
