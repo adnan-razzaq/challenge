@@ -21,7 +21,7 @@ Frontend is hosted on Netlify which can be access by the following link
 
 ### Installing
 
-- You can access the solutions from following link
+- Project can be accessed from the following link
   (https://github.com/adnan-razzaq/challenge)
 
 ### Executing program
