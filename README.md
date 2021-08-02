@@ -32,6 +32,7 @@ Frontend is hosted on Netlify which can be access by the following link
 ```
 git clone https://github.com/adnan-razzaq/challenge.git
 
+cd challenge
 npm install
 
 ```
